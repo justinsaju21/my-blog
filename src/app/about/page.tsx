@@ -1,0 +1,80 @@
+import Image from "next/image";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+
+export const metadata = {
+    title: "About | Justin Jacob Saju",
+    description: "Learn more about Justin Jacob Saju, an Engineering Student at SRM IST KTR.",
+};
+
+const skills = [
+    "Embedded Systems", "VLSI Design", "5G Communications", "IoT",
+    "React / Next.js", "Python", "C/C++", "Verilog"
+];
+
+export default function AboutPage() {
+    return (
+        <main className="min-h-screen pt-32 pb-20 px-6">
+            <div className="max-w-4xl mx-auto">
+
+                {/* Profile Header */}
+                <div className="text-center mb-16">
+                    <div className="relative w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-[#7c3aed] to-[#3b82f6] p-1 shadow-[0_0_30px_rgba(124,58,237,0.4)]">
+                        <div className="w-full h-full rounded-full bg-midnight overflow-hidden flex items-center justify-center">
+                            {/* Replace with your actual image later */}
+                            <span className="text-4xl">👨‍💻</span>
+                        </div>
+                    </div>
+
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-[#c084fc] to-[#7c3aed] bg-clip-text text-transparent inline-block">
+                            Justin Jacob Saju
+                        </span>
+                    </h1>
+                    <p className="text-xl text-foreground-muted font-light mb-8">
+                        Engineering Student @ SRM IST KTR
+                    </p>
+
+                    <div className="flex justify-center gap-4">
+                        <a href="https://github.com" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-[#7c3aed]/20 hover:text-[#a78bfa] transition-colors"><Github size={20} /></a>
+                        <a href="https://linkedin.com" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-[#7c3aed]/20 hover:text-[#a78bfa] transition-colors"><Linkedin size={20} /></a>
+                        <a href="https://twitter.com" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-[#7c3aed]/20 hover:text-[#a78bfa] transition-colors"><Twitter size={20} /></a>
+                        <a href="mailto:hello@example.com" className="p-3 rounded-full bg-white/5 hover:bg-[#7c3aed]/20 hover:text-[#a78bfa] transition-colors"><Mail size={20} /></a>
+                    </div>
+                </div>
+
+                {/* Bio Section */}
+                <div className="prose prose-invert prose-lg max-w-none mb-16 px-4 md:px-0">
+                    <p className="leading-relaxed text-foreground-muted mb-6">
+                        Hello! I'm Justin, a passionate engineering student currently pursuing my degree at
+                        <span className="text-[#a78bfa] font-medium"> SRM Institute of Science and Technology (KTR)</span>.
+                    </p>
+                    <p className="leading-relaxed text-foreground-muted mb-6">
+                        My journey involves exploring the intersection of <span className="text-white">hardware and software</span>.
+                        I love digging deep into how computers work at the lowest level—from transistor logic in VLSI to
+                        real-time constraints in embedded systems.
+                    </p>
+                    <p className="leading-relaxed text-foreground-muted">
+                        When I'm not studying or building circuits, I'm likely writing about
+                        <span className="text-white"> 5G advancements</span> or tinkering with AI models to optimize hardware workflows.
+                    </p>
+                </div>
+
+                {/* Skills Grid */}
+                <div className="mb-16">
+                    <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
+                        <span className="w-1 h-8 bg-[#7c3aed] rounded-full"></span>
+                        Technical Arsenal
+                    </h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {skills.map((skill) => (
+                            <div key={skill} className="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-[#7c3aed]/50 hover:bg-[#7c3aed]/10 transition-all text-center">
+                                <span className="text-sm font-medium text-foreground-muted">{skill}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    );
+}
