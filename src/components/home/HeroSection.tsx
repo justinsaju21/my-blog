@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles, Cpu, Radio, Zap } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export function HeroSection() {
     return (

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export const metadata = {
@@ -45,7 +44,7 @@ export default function AboutPage() {
                 {/* Bio Section */}
                 <div className="prose prose-invert prose-lg max-w-none mb-16 px-4 md:px-0">
                     <p className="leading-relaxed text-foreground-muted mb-6">
-                        Hello! I'm Justin, a passionate engineering student currently pursuing my degree at
+                        Hello! I&apos;m Justin, a passionate engineering student currently pursuing my degree at
                         <span className="text-[#a78bfa] font-medium"> SRM Institute of Science and Technology (KTR)</span>.
                     </p>
                     <p className="leading-relaxed text-foreground-muted mb-6">
@@ -54,7 +53,7 @@ export default function AboutPage() {
                         real-time constraints in embedded systems.
                     </p>
                     <p className="leading-relaxed text-foreground-muted">
-                        When I'm not studying or building circuits, I'm likely writing about
+                        When I&apos;m not studying or building circuits, I&apos;m likely writing about
                         <span className="text-white"> 5G advancements</span> or tinkering with AI models to optimize hardware workflows.
                     </p>
                 </div>
