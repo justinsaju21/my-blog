@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://www.justinsaju.me/sitemap.xml',
+        sitemap: 'https://blog.justinsaju.me/sitemap.xml',
     }
 }

@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, RocketIcon, BookOpenIcon, CpuIcon, MailIcon, Download, Phone } from "lucide-react";
+import { ChevronRight, RocketIcon, BookOpenIcon, CpuIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import { TiltCard } from "@/components/ui/tilt-card";
-import { NoiseBackground } from "@/components/ui/noise-background";
 import { GithubStats } from "@/components/ui/GithubStats";
+import { AdBanner } from "@/components/ui/AdBanner";
+import { GlassAdCard } from "@/components/ui/GlassAdCard";
 
 export default function Home() {
   return (
     <>
-      <NoiseBackground />
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -59,7 +58,7 @@ export default function Home() {
               style={{ color: "var(--foreground-muted)" }}
               className="text-xs font-semibold tracking-wide uppercase"
             >
-              ECE &apos;27 @ SRMIST • IEEE MTTs Chair
+              SRM IST KTR • Engineering Student
             </span>
           </motion.div>
 
@@ -131,52 +130,6 @@ export default function Home() {
               Explore Projects
               <ChevronRight className="w-4 h-4" />
             </Link>
-            <Link
-              href="https://docs.google.com/document/d/1oEAf4BAUeUv-QptuoNsQglzuAtBdF_AZ/edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                backgroundColor: "rgba(30, 27, 75, 0.5)",
-                border: "1px solid rgba(139, 92, 246, 0.5)",
-                color: "var(--foreground)",
-              }}
-              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-opacity-70 transition-all"
-            >
-              <Download className="w-4 h-4" />
-              Resume
-            </Link>
-          </motion.div>
-
-          {/* Contact Info Pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mt-8"
-          >
-            <a
-              href="mailto:justinsaju21@gmail.com"
-              style={{
-                backgroundColor: "rgba(30, 27, 75, 0.3)",
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                color: "var(--foreground-muted)",
-              }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm hover:opacity-80 transition-all"
-            >
-              <MailIcon className="w-4 h-4" />
-              justinsaju21@gmail.com
-            </a>
-            <span
-              style={{
-                backgroundColor: "rgba(30, 27, 75, 0.3)",
-                border: "1px solid rgba(139, 92, 246, 0.3)",
-                color: "var(--foreground-muted)",
-              }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm"
-            >
-              <Phone className="w-4 h-4" />
-              +91 8606884320 / +974 66834157
-            </span>
           </motion.div>
         </div>
       </section>
@@ -247,9 +200,7 @@ export default function Home() {
             >
               <TiltCard>
                 <Link
-                  href="https://blog.justinsaju.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/blog"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
                     backgroundColor: "rgba(30, 27, 75, 0.6)",
@@ -272,12 +223,24 @@ export default function Home() {
               </TiltCard>
             </motion.div>
 
+            {/* Native Ad 1 - Styled as 'Sponsored Tool' */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.25 }}
+              className="md:col-span-1"
+            >
+              <GlassAdCard className="min-h-[250px] w-full" format="rectangle" />
+            </motion.div>
+
             {/* Card 3: GitHub (Dynamic) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
+              className="md:col-span-2"
             >
               <TiltCard>
                 <Link
@@ -364,9 +327,23 @@ export default function Home() {
                 </Link>
               </TiltCard>
             </motion.div>
+
+            {/* Native Ad 2 - Mixed into grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.55 }}
+              className="md:col-span-1"
+            >
+              <GlassAdCard className="min-h-[250px] w-full" format="rectangle" />
+            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Ad Space After Bento Grid */}
+      <AdBanner slot="after-bento" className="mb-16" />
     </>
   );
 }

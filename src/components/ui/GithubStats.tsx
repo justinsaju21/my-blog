@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GithubIcon, Star, GitFork } from "lucide-react";
+import { Github } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface GithubData {
@@ -28,7 +28,7 @@ export function GithubStats() {
 
     return (
         <div className="flex flex-col h-full">
-            <GithubIcon className="w-8 h-8 mb-4 lg:w-10 lg:h-10 transition-colors duration-300 group-hover:text-[#8b5cf6]" style={{ color: "#8b5cf6" }} />
+            <Github className="w-8 h-8 mb-4 lg:w-10 lg:h-10 transition-colors duration-300 group-hover:text-[#8b5cf6]" style={{ color: "#8b5cf6" }} />
 
             <div className="flex-1 flex flex-col justify-end">
                 <h3 className="text-xl font-bold mb-1" style={{ color: "var(--foreground)" }}>GitHub</h3>
