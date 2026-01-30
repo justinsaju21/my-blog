@@ -1,13 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, ChevronRight, BookOpen } from "lucide-react";
+import { GraduationCap, ChevronRight, BookOpen, Calculator, Cpu, Play, Github, ExternalLink } from "lucide-react";
 import { AdBanner } from "@/components/ui/AdBanner";
 import Link from "next/link";
 import { TiltCard } from "@/components/ui/tilt-card";
 
-const learnTopics: { title: string; description: string; tags: string[]; icon: React.ElementType; color: string; }[] = [
-    // Add your learn topics here
+interface LearnTopic {
+    title: string;
+    description: string;
+    tags: string[];
+    icon: React.ElementType;
+    color: string;
+    github?: string;
+    streamlit?: string;
+}
+
+const learnTopics: LearnTopic[] = [
+    {
+        title: "CMOS Switch & Duality Visualizer",
+        description: "Interactive visualization of Static CMOS Logic and CMOS Duality. Perfect for understanding VLSI fundamentals.",
+        tags: ["VLSI", "CMOS", "Interactive", "Education"],
+        icon: Cpu,
+        color: "#ec4899",
+        github: "https://github.com/justinsaju21/CMOS-Switch-Translator-Duality-Conduction-Visualizer",
+        streamlit: "https://justinsaju21-cmos-switch-translator-duality-conducti-app-akx8f0.streamlit.app/",
+    },
+    {
+        title: "LogicMap Pro",
+        description: "Master Karnaugh Maps and Boolean algebra minimization with this professional solver and visualizer.",
+        tags: ["Digital Logic", "K-Map", "Boolean Algebra"],
+        icon: Calculator,
+        color: "#06b6d4",
+        github: "https://github.com/justinsaju21/logicmap-pro",
+        streamlit: "https://justinsaju21-logicmap-pro-app-kvmnf2.streamlit.app/",
+    },
+    {
+        title: "Op-Amp Deep Dive Lab",
+        description: "Explore operational amplifier circuits interactively. Covers inverting, non-inverting, and integrator configurations.",
+        tags: ["Analog Electronics", "Op-Amp", "Simulation"],
+        icon: Cpu,
+        color: "#22c55e",
+        github: "https://github.com/justinsaju21/opamp-deep-dive-lab",
+        streamlit: "https://justinsaju21-opamp-deep-dive-lab-app-hqjbjr.streamlit.app/",
+    },
+    {
+        title: "Interactive CPU Lab",
+        description: "Hands-on CPU architecture simulation. Learn about registers, ALU, and instruction cycles through interaction.",
+        tags: ["Computer Architecture", "CPU", "Assembly"],
+        icon: Cpu,
+        color: "#3b82f6",
+        github: "https://github.com/justinsaju21/interactive-cpu-lab",
+        streamlit: "https://justinsaju21-interactive-cpu-lab-home-hqfnek.streamlit.app/",
+    },
+    {
+        title: "Stick Diagram Painter",
+        description: "Learn VLSI physical design by creating stick diagrams. Understand layout rules and transistor placement.",
+        tags: ["VLSI", "Physical Design", "Layout"],
+        icon: Calculator,
+        color: "#8b5cf6",
+        github: "https://github.com/justinsaju21/stick-diagram-painter",
+        streamlit: "https://justinsaju21-stick-diagram-painter-1--home-uunyi2.streamlit.app/",
+    },
 ];
 
 export default function LearnPage() {
