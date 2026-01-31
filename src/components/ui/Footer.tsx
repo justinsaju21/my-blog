@@ -16,6 +16,8 @@ const footerLinks = [
     { href: "https://projects.justinsaju.me", label: "Projects Hub", external: true },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+    { href: "/privacy", label: "Privacy Policy" },
 ];
 
 export function Footer() {
