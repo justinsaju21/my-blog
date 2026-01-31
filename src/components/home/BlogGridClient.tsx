@@ -73,7 +73,7 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                 >
                                     <a
-                                        href={`https://blog.justinsaju.me/blog/${post.slug?.current || ""}`}
+                                        href={`https://blogs.justinsaju.me/blog/${post.slug?.current || ""}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
@@ -144,7 +144,7 @@ export function BlogGridClient({ posts }: BlogGridClientProps) {
                             className="text-center mt-16"
                         >
                             <a
-                                href="https://blog.justinsaju.me"
+                                href="https://blogs.justinsaju.me"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-8 py-4 glass rounded-xl text-foreground hover:glow transition-all group"

@@ -201,10 +201,8 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <TiltCard>
-                <a
-                  href="https://blogs.justinsaju.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/blog"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
                     backgroundColor: "rgba(30, 27, 75, 0.6)",
@@ -223,7 +221,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#c084fc]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </a>
+                </Link>
               </TiltCard>
             </motion.div>
 
