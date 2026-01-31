@@ -118,8 +118,10 @@ export default function Home() {
             >
               View Portfolio
             </Link>
-            <Link
-              href="/projects"
+            <a
+              href="https://projects.justinsaju.me"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 backgroundColor: "rgba(30, 27, 75, 0.5)",
                 border: "1px solid rgba(139, 92, 246, 0.5)",
@@ -129,7 +131,7 @@ export default function Home() {
             >
               Explore Projects
               <ChevronRight className="w-4 h-4" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -272,8 +274,10 @@ export default function Home() {
               className="md:col-span-1"
             >
               <TiltCard>
-                <Link
-                  href="/projects"
+                <a
+                  href="https://projects.justinsaju.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block h-full w-full p-6 group relative rounded-2xl"
                   style={{
                     backgroundColor: "rgba(30, 27, 75, 0.6)",
@@ -292,7 +296,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </Link>
+                </a>
               </TiltCard>
             </motion.div>
 
