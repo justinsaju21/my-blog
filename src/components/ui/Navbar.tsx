@@ -14,6 +14,14 @@ const navLinks = [
   { href: "https://photography.justinsaju.me", label: "Photography" },
 ];
 
+const dropdownMenu = {
+  label: "Apps",
+  items: [
+    { href: "https://echoflow.justinsaju.me", label: "EchoFlow" },
+    { href: "https://photobooth.justinsaju.me", label: "Photobooth" },
+  ]
+};
+
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,7 +85,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 gap-8">
+            <div className="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 gap-4 lg:gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -88,6 +96,32 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Apps Dropdown */}
+              <div className="relative group">
+                <button
+                  style={{ color: "var(--text-secondary)" }}
+                  className="text-sm font-medium hover:text-[var(--text-primary)] transition-colors flex items-center gap-1"
+                >
+                  {dropdownMenu.label}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="bg-black/40 border border-white/10 rounded-xl shadow-xl backdrop-blur-xl py-2 w-40 flex flex-col overflow-hidden">
+                    {dropdownMenu.items.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className="px-4 py-2.5 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Actions */}
@@ -149,6 +183,21 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            
+            <div className="flex flex-col items-center gap-4 mt-4 border-t border-white/10 pt-8">
+              <span className="text-sm font-medium text-[var(--text-secondary)] uppercase tracking-wider">{dropdownMenu.label}</span>
+              {dropdownMenu.items.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ color: "var(--text-primary)" }}
+                  className="text-xl font-semibold hover:opacity-70 transition-opacity"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </motion.div>
       )}

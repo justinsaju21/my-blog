@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, RocketIcon, BookOpenIcon, CpuIcon, MailIcon } from "lucide-react";
+import { ChevronRight, RocketIcon, BookOpenIcon, CpuIcon, MailIcon, Camera } from "lucide-react";
 import Link from "next/link";
 import { TiltCard } from "@/components/ui/tilt-card";
 import { GithubStats } from "@/components/ui/GithubStats";
@@ -32,29 +32,7 @@ export default function Home() {
           />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 pointer-events-none">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            style={{
-              border: "1px solid rgba(124, 58, 237, 0.3)",
-              backgroundColor: "rgba(30, 0, 40, 0.3)",
-              backdropFilter: "blur(8px)",
-            }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8"
-          >
-            <span
-              className="flex h-2 w-2 rounded-full"
-              style={{ backgroundColor: "#06B6D4" }}
-            />
-            <span
-              style={{ color: "var(--text-muted)" }}
-              className="text-xs font-semibold tracking-wide uppercase"
-            >
-              SRM IST KTR • Engineering Student
-            </span>
-          </motion.div>
+          {/* Badge Removed */}
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -66,11 +44,11 @@ export default function Home() {
             <span
               className="inline-block text-6xl md:text-8xl font-bold pb-2"
               style={{
-                background: "linear-gradient(135deg, #C084FC 0%, #22D3EE 100%)",
+                background: "linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
-                filter: "drop-shadow(0 0 30px rgba(192, 132, 252, 0.4))",
+                filter: "drop-shadow(0 0 30px color-mix(in srgb, var(--accent-purple) 40%, transparent))",
               }}
             >
               ECHO System
@@ -114,7 +92,7 @@ export default function Home() {
                 border: "1px solid var(--glass-border)",
                 color: "var(--text-primary)",
               }}
-              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-white/5 transition-all pointer-events-auto"
+              className="flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold hover:bg-[color-mix(in_srgb,var(--text-primary)_5%,transparent)] transition-all pointer-events-auto"
             >
               Explore Blogs
               <ChevronRight className="w-4 h-4" />
@@ -171,8 +149,8 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold mb-2 text-[var(--text-primary)]">My Portfolio</h3>
-                      <p className="text-[var(--text-muted)] text-lg max-w-md">
+                      <h3 className="text-3xl font-bold mb-2 text-white">My Portfolio</h3>
+                      <p className="text-white/70 text-lg max-w-md">
                         Professional portfolio, resume, and detailed case studies.
                         Embedded Systems, VLSI, and AI.
                       </p>
@@ -201,7 +179,7 @@ export default function Home() {
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
                     <div>
-                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">The Writer</h3>
+                      <h3 className="text-xl font-bold mb-1 text-white">The Writer</h3>
                       <p className="text-sm text-[var(--text-muted)] line-clamp-2">
                         Technical articles & tutorials on engineering.
                       </p>
@@ -232,7 +210,7 @@ export default function Home() {
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
                     <div>
-                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">Projects Hub</h3>
+                      <h3 className="text-xl font-bold mb-1 text-white">Projects Hub</h3>
                       <p className="text-sm text-[var(--text-muted)] line-clamp-2">
                         Showcase of technical projects and experiments.
                       </p>
@@ -264,7 +242,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <div>
-                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)] shadow-sm">Photography</h3>
+                      <h3 className="text-xl font-bold mb-1 text-white shadow-sm">Photography</h3>
                       <p className="text-sm text-gray-300 line-clamp-2">
                         My visual journal and captured moments.
                       </p>
@@ -287,19 +265,12 @@ export default function Home() {
               <TiltCard>
                 <Link
                   href="mailto:justinsaju21@gmail.com"
-                  className="block h-full w-full p-6 group relative rounded-2xl"
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.03)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                    backdropFilter: "blur(16px)",
-                  }}
-                >
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card">
                   <div className="relative z-10 flex flex-col h-full justify-between">
-                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#06B6D4]" style={{ color: "rgba(255, 255, 255, 0.8)" }} />
+                    <MailIcon className="w-8 h-8 transition-colors duration-300 group-hover:text-[#06B6D4] text-[var(--text-primary)]" />
                     <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "#ffffff" }}>Get In Touch</h3>
-                      <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                      <h3 className="text-xl font-bold mb-1 text-[var(--text-primary)]">Get In Touch</h3>
+                      <p className="text-sm text-[var(--text-secondary)]">
                         Have a project idea? Let&apos;s collaborate.
                       </p>
                     </div>
@@ -329,6 +300,81 @@ export default function Home() {
                     <GithubStats />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                </Link>
+              </TiltCard>
+            </motion.div>
+
+
+            {/* Card 7: Photobooth (2x1) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.65 }}
+              className="md:col-span-2 md:row-span-1"
+            >
+              <TiltCard>
+                <Link
+                  href="https://photobooth.justinsaju.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
+                >
+                  <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div className="flex justify-between items-start">
+                      <Camera className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#F472B6]" />
+                      <ChevronRight
+                        className="w-6 h-6 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-white">Photobooth</h3>
+                      <p className="text-sm text-white/70 line-clamp-2">
+                        Capture digital photo strips with real-time filters and themes.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-0" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                </Link>
+              </TiltCard>
+            </motion.div>
+
+            {/* Card 8: Timetable Creator (2x1) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.68 }}
+              className="md:col-span-2 md:row-span-1"
+            >
+              <TiltCard>
+                <Link
+                  href="https://timetable.justinsaju.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full w-full p-6 group relative rounded-2xl glass-card overflow-hidden"
+                >
+                  <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1000&auto=format&fit=crop')" }} />
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div className="flex justify-between items-start">
+                      <svg className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <ChevronRight
+                        className="w-6 h-6 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-white">Timetable Creator</h3>
+                      <p className="text-sm text-white/70 line-clamp-2">
+                        Effortlessly generate and manage interactive academic schedules.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-0" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 </Link>
               </TiltCard>
