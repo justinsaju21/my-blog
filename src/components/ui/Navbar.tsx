@@ -127,7 +127,7 @@ export function Navbar() {
             {/* Right Actions */}
             <div className="hidden md:flex items-center gap-4">
               <Link
-                href="https://projects.justinsaju.me"
+                href="https://portfolio.justinsaju.me"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-1.5 rounded-full text-sm font-medium transition-all"
