@@ -17,10 +17,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://justinsaju.me"),
   title: "ECHO System | Justin Jacob Saju",
   description: "Exploring embedded systems, VLSI, 5G communications, and AI-driven solutions. The central hub for all projects, blogs, and photography.",
   keywords: ["engineering", "embedded systems", "VLSI", "5G", "AI", "technology", "SRM IST", "blog", "portfolio"],
   authors: [{ name: "Justin Jacob Saju" }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "ECHO System | Justin Jacob Saju",
     description: "The central digital hub for all projects, blogs, and photography by Justin Jacob Saju.",

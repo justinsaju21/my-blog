@@ -135,7 +135,7 @@ export default function Home() {
             >
               <TiltCard>
                 <Link
-                  href="https://portfolio.justinsaju.me"
+                  href="https://projects.justinsaju.me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block h-full w-full p-8 group relative overflow-hidden rounded-2xl glass-card"
