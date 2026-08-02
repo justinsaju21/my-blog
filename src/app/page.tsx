@@ -143,9 +143,9 @@ export default function Home() {
                   <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <CpuIcon className="w-10 h-10 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#06B6D4]" />
+                      <CpuIcon className="w-10 h-10 transition-colors duration-300 text-white group-hover:text-[#06B6D4]" />
                       <ChevronRight
-                        className="w-6 h-6 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
+                        className="w-6 h-6 text-white/70 group-hover:translate-x-1 transition-all"
                       />
                     </div>
                     <div>
@@ -177,10 +177,10 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
-                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
+                    <BookOpenIcon className="w-8 h-8 transition-colors duration-300 text-white group-hover:text-[#7C3AED]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-white">The Writer</h3>
-                      <p className="text-sm text-[var(--text-muted)] line-clamp-2">
+                      <p className="text-sm text-white/70 line-clamp-2">
                         Technical articles & tutorials on engineering.
                       </p>
                     </div>
@@ -208,10 +208,10 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-30 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
-                    <RocketIcon className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#7C3AED]" />
+                    <RocketIcon className="w-8 h-8 transition-colors duration-300 text-white group-hover:text-[#7C3AED]" />
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-white">Projects Hub</h3>
-                      <p className="text-sm text-[var(--text-muted)] line-clamp-2">
+                      <p className="text-sm text-white/70 line-clamp-2">
                         Showcase of technical projects and experiments.
                       </p>
                     </div>
@@ -237,13 +237,13 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-60 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
-                    <svg className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#06B6D4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 transition-colors duration-300 text-white group-hover:text-[#06B6D4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <div>
                       <h3 className="text-xl font-bold mb-1 text-white shadow-sm">Photography</h3>
-                      <p className="text-sm text-gray-300 line-clamp-2">
+                      <p className="text-sm text-white/70 line-clamp-2">
                         My visual journal and captured moments.
                       </p>
                     </div>
@@ -324,9 +324,9 @@ export default function Home() {
                   <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <Camera className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#F472B6]" />
+                      <Camera className="w-8 h-8 transition-colors duration-300 text-white group-hover:text-[#F472B6]" />
                       <ChevronRight
-                        className="w-6 h-6 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
+                        className="w-6 h-6 text-white/70 group-hover:translate-x-1 transition-all"
                       />
                     </div>
                     <div>
@@ -360,11 +360,11 @@ export default function Home() {
                   <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1000&auto=format&fit=crop')" }} />
                   <div className="relative z-10 flex flex-col h-full justify-between">
                     <div className="flex justify-between items-start">
-                      <svg className="w-8 h-8 transition-colors duration-300 text-[var(--text-primary)] group-hover:text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-8 h-8 transition-colors duration-300 text-white group-hover:text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                       <ChevronRight
-                        className="w-6 h-6 text-[var(--text-secondary)] group-hover:translate-x-1 transition-all"
+                        className="w-6 h-6 text-white/70 group-hover:translate-x-1 transition-all"
                       />
                     </div>
                     <div>
